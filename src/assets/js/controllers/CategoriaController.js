@@ -6,9 +6,8 @@ class CategoriaController{
     }
 
     montar(){
-        console.log(" --> CategoriaController:montar")
         this._categoriaService.listarTodas()
-            .then(categoria => categoria.map( categoria => console.log(categoria.descricao)))
+            .then(categoria => categoria.map( categoria => this._categorias.adicionar(categoria)))
             .then(() => this._categoriaView.montarListagem(this._categorias))
             .catch("Erro ao montar")
     } 

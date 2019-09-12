@@ -6,6 +6,6 @@ class CategoriaService extends Service{
 
     listarTodas(){
         console.log(" --> CategoriaService:listarTodos")
-        return fetch(`${this._path}`).then(res => res.json()).then("FOI").catch(e => console.log(e))
+        return fetch(`${this._path}`).then(res => res.json()).catch(e => console.log(e))
     }
 }
